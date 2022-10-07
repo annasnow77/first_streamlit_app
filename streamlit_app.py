@@ -47,11 +47,6 @@ try:
 except ULRError as e:
   streamlit.error()
 
-streamlit.write('The user entered', fruit_choice)
-                                     
-#don't run any code from below
-streamlit.stop()
-
 streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
@@ -63,6 +58,12 @@ if streamlit.button('Get Fruit Load List'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    my_data_rows = get_fruit_load_list()
    streamlit.dataframe(my_data_rows)
+   
+streamlit.write('The user entered', fruit_choice)                                     
+#don't run any code from below
+streamlit.stop()
+
+
    
 #my_cur = my_cnx.cursor()
 #add text box

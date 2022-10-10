@@ -46,10 +46,10 @@ try:
 #except ULRError as e:
  # streamlit.error()
 
-streamlit.write('The user entered', fruit_choice)    
+#streamlit.write('The user entered', fruit_choice)    
 
 #don't run any code from below
-streamlit.stop()
+#streamlit.stop()
 
 streamlit.header("The fruit load list contains:")
 def get_fruit_load_list():

@@ -52,10 +52,10 @@ except ULRError as e:
 #don't run any code from below
 #streamlit.stop()
 
-streamlit.header("The fruit load list contains:")
+streamlit.header("View Our Fruit List - Add Your favorite:")
 def get_fruit_load_list():
    with my_cnx.cursor() as my_cur:
-        my_cur.execute("select * from fruit_load_list")
+        my_cur.execute("select * from FRUIT_LOAD_LIST")
         return my_cur.fetchall()
       
 #add a buton to load the fruit
